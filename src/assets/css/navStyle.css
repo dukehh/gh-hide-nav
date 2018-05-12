@@ -1,0 +1,113 @@
+body {
+  font-family: "Arial", Serif;
+  overflow-x: hidden;
+}
+
+.menu-left {
+  float: left;
+}
+
+.menu-right {
+  float: right;
+}
+
+.menue-nav ul {
+  margin: 2px 0 0 0;
+  list-style: none;
+}
+
+.menue-nav li {
+  float: left;
+}
+
+.menue-nav {
+  height: 100%;
+}
+
+.active-li {
+  border-top: 2px solid red;
+}
+
+.navbar {
+  overflow: hidden;
+  height: 63px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar ul {
+  margin: 8px 0 0 0;
+  list-style: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  background: url('../images/arrow.png') no-repeat center bottom;
+  color: #000;
+}
+
+/*
+.navbar a:active {
+  border-top: 2px solid red;
+}*/
+.navbar .active {
+  border-top: 2px solid red;
+  padding-top: 8px;
+
+}
+
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 64px;
+  left: 0;
+  background-color: #8e8e8e;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.side-nav a {
+  padding: 1px 1px 1px 10px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #ffffff;
+  display: block;
+}
+
+.side-nav a:hover {
+  color: #000000;
+  background: url('../images/arrowLinksBlack.png') no-repeat center left;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  font-size: 24px;
+  margin-left: 30px;
+}
+
+@media (max-width: 568px) {
+  .navbar-nav {
+    display: none
+  }
+}
+
+@media (min-width: 568px) {
+  /*.open-slide{display:none}*/
+}
+

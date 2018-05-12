@@ -1,0 +1,73 @@
+<section>
+  <div id="particles-js">
+    <nav class="navbar">
+      <div class="menu-left menue-nav">
+        <ul>
+          <li>
+            <img class="logo" style="max-width:100px;" src="assets/images/Scrum-oranje_logo.gif" (contextmenu)="onRightClick($event)">
+          </li>
+          <li *ngIf="isLoggedIn$ | async as isLoggedIn; then showAll else showPartly"></li>
+          <ng-template #showAll>
+            <li>
+              <span class="open-slide">
+                <a onclick="slideMenu('100px', '100px')">
+                  <span class="glyphicon glyphicon-align-justify" style="font-size: 24px;"></span>
+                </a>
+              </span>
+            </li>
+            <li>
+              <a routerLink="/home" routerLinkActive="active">Home</a>
+            </li>
+            <li>
+              <a routerLink="/portfolio" routerLinkActive="active">Julia</a>
+            </li>
+            <li>
+              <a routerLink="/flightinstrument" routerLinkActive="active">FlightInstruments</a>
+            </li>
+            <li>
+              <a routerLink="/about" routerLinkActive="active">About</a>
+            </li>
+          </ng-template>
+          <ng-template #showPartly>
+            <li>
+              <a routerLink="/home" routerLinkActive="active">Home</a>
+            </li>
+          </ng-template>
+        </ul>
+      </div>
+      <div class="menu-right menue-nav">
+        <ul>
+          <li *ngIf="isLoggedIn$ | async as isLoggedIn; then logout else login"></li>
+          <ng-template #login>
+            <li>
+              <a routerLink="/login" routerLinkActive="active">
+                <span class="glyphicon glyphicon-log-in"></span>
+                Login</a>
+            </li>
+          </ng-template>
+          <ng-template #logout>
+            <li (click)='onLogout()'>
+              <a routerLink="/logout" routerLinkActive="active">
+                <span class="glyphicon glyphicon-log-out"></span>
+                Logout
+                <p class="currentUser" *ngIf="currentUser">{{ currentUser }}</p>
+              </a>
+            </li>
+          </ng-template>
+          <li>
+            <a routerLink="/contact" routerLinkActive="active">
+              <span class="glyphicon glyphicon-envelope"></span>
+              Contact</a>
+          </li>
+          <li>
+            <gh-clock></gh-clock>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div id="container">
+    <gh-sidenav></gh-sidenav>
+    <router-outlet></router-outlet>
+  </div>
+</section>

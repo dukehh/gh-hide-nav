@@ -1,0 +1,22 @@
+#login {
+  background: #f9ffc9;
+  opacity:0.9;
+  padding:2em;
+  border:#ccc 2px solid;
+  position:absolute;
+  top:100px;
+  left:30vw;
+  color: black;
+  text-align: left;
+}
+
+#login input[type="text"], #login input[type="password"], button{
+  padding:7px;
+  margin-bottom:10px;
+  border:1px #ccc solid;
+  background: ButtonHighlight;
+}
+
+#login #message{
+  background-color: #ffbfb6;
+}

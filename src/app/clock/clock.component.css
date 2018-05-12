@@ -1,0 +1,7 @@
+.clock #canvas {
+  position: relative;
+  cursor: pointer;
+  width: 74px;
+  right: -6px;
+  top: -14px;
+}

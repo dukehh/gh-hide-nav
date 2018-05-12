@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Gerd Herzog">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="assets/js/ghJSfunctions.js"></script>
+  <script src="assets/js/clock.js"></script>
+  <title id="requestFrom"></title>
+</head>
+<body>
+<gh-root></gh-root>
+<script>
+  const str =  window.location.href.split("//")[1].slice(0, -1);
+  document.getElementById("requestFrom").innerHTML = str;
+</script>
+</body>
+</html>

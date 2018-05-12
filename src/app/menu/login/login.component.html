@@ -1,0 +1,17 @@
+<div id="login">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Username</label>
+      <br>
+      <input type="text" id="username" placeholder="User" formControlName="username" required>
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <br>
+      <input type="password" id="password" #focusit placeholder="Password" formControlName="password" required>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+  <div id="message" *ngIf="!loginSucceeded">{{noSuccessMessage}}</div>
+</div>

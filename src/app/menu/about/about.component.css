@@ -1,0 +1,28 @@
+.gridabout {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr 1fr 1fr);
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.gridabout > div {
+  background-color: #ddd;
+  border-style: solid;
+  border-color: #EFEFEF #C0C0C0 #C0C0C0 #EFEFEF;
+  overflow-x: hidden;
+  top: 64px;
+}
+
+.gridabout > div:nth-child(odd) {
+  background-color: #979797;
+}
+
+.gridaboutimg {
+  width: 100%;
+  /*height: 100%;*/
+  align: center;
+  valign: center;
+}
+
+
+
+
