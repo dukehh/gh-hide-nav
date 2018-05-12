@@ -1,4 +1,4 @@
-var to;
+let to;
 
 function toSlideMenu(width, paddingLeft) {
 	if (width === '0') {

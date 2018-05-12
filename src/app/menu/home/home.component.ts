@@ -7,7 +7,6 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  isClicked: Boolean = false;
   isMouseDown: Boolean = false;
   wrapper: any;
   topLayer: any;
@@ -30,16 +29,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   }
 
-  onClick(e) {
-    this.isClicked = !this.isClicked;
-    console.log(`onClick: ${(this.isClicked) ? 'aktiv' : 'inaktiv'}`);
-
-  }
-
   onMouseMove(e) {
     if (this.isMouseDown) {
       this.delta = (e.clientX - window.innerWidth / 2) * 0.5;
-      this.handle.style.left = e.clientX + this.delta + 'px';
+      this.handle.style.left = e.clientX + this.delta  + 'px';
       this.topLayer.style.width = e.clientX + this.skew + this.delta + 'px';
     }
      return false;
